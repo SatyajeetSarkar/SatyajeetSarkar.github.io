@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    color: #f0f0f0;
+    scrollbar-gutter: stable;   
+    overflow-x: hidden;
+    cursor: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.pages{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav{
+    /* background-color: crimson; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  2em;
+    font-size: large;
+    position: absolute;
+    width: 100%;
+}
+
+#items{
+    display: flex;
+    gap: 1.5em; 
+    list-style: none;
+}
+
+
+.container{
+    position: relative;
+    height: 40%;
+    width: 80%;
+    text-align: center;
+        
+}
+
+
+.box{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.layer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+#cursor{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: #fff;
+    z-index: 9;
+    color: #fff;
+    font-size: 1;
+    mix-blend-mode: difference;
+}
+
+.letters{
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.button {
+    padding: 10px 20px;
+    border: 2px solid #f0f0f0;
+    background-color: transparent;
+    color: #f0f0f0;
+    border-radius: 10px;
+}
+
+#contact {
+    display: none;
+    margin-top: 3em;
+    padding: 10px 30px;
+}
+
+#cta {
+    margin-top: 3em;
+    padding: 10px 30px;
+}
+
+.caption {
+    display: flex;
+    gap: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9rem;
+    color: #888;
+    transform: translateY(1400%);
+}
+
+
+@media (max-width: 1200px){
+    #nav h2{
+        font-size: 1.7rem;
+    }
+    #items{
+        gap: 1em;
+    }
+    #cursor{
+        display: none;
+    }
+}
+ 
+
+/* Mobiles */
+@media (max-width: 600px){
+    #nav{
+        padding: 1em;
+        font-size: 1rem;
+    }
+
+    #items{
+        gap: .5em;
+    }
+
+    .pages{
+        padding: 0 1rem;
+    }
+
+    .container{
+        height: 20%;
+        width: 100%;
+    }
+
+    .letters h1{
+        font-size: clamp(2rem, 10vw, 4rem);
+    }
+
+    .caption{
+        font-size: small;
+        text-align: center;
+    }
+
+    .button{
+        padding: 8px 16px;
+    }
+
+    #contact{
+        display: inline-block;
+    }
+
+    #items li{
+        display: none;  /* hide nav items on mobile */
+    }
+
+    #cursor{
+        display: none;  /* hide custom cursor on mobile */
+    }
+
+    footer {
+        transform: translateY(1600%);
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px){
+    .letters h1{
+        font-size: 2.5rem;
+    }
+}
